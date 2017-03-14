@@ -1,0 +1,26 @@
+
+[{
+    "key": "null",
+    "val": ""
+},{
+    "key": "DEGT",
+    "val": "DEGT"
+}, {
+    "key": "Oil Temperature",
+    "val": "Oil Temperature"
+}, {
+    "key": "Alttitute",
+    "val": "Alttitute"
+}, {
+    "key": "Max Speed",
+    "val": "Max Speed"
+}, {
+    "key": "Oil Pressure", 
+    "val": "Oil Pressure"
+}, {
+    "key": "Mach",
+    "val": "Mach"
+}, {
+    "key": "Fuel Flow",
+    "val": "Fuel Flow"
+}]

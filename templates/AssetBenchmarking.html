@@ -1,0 +1,573 @@
+<style type="text/css">
+  .navbar-brand{
+  float:none !important;
+}
+.panel-default .panel-heading{
+    background-color: #4682B4 ;
+    color: #ffffff;
+    border: 1px solid #000000;
+    }
+table td{
+      height: 36px;
+}
+/*.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  border: 0px;
+  }*/
+.boldcol{
+  font-weight: bold;
+  font-size: 1em;
+}
+/*.table-striped {
+  border:0px;
+  background-color:#87CEFA;
+}*/
+a:hover {
+    color: #f5f5f5;
+    }
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th
+{
+/*background-color: #fff;rgba(0, 92, 185, 0.12);*/
+/* border: 1px solid  #000000;*/
+}
+@media screen and (min-width: 0px) and (max-width: 414px) {
+  #smartleftpad {
+    padding-left: 0px;
+  }
+ 
+}
+ 
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  #my-contentS { display: block; }  /* show it on small screens */
+  #my-contentL { display: none; }  /* hide it elsewhere */
+  #collwid {width: 190px;}
+    #widUL1{
+  width:180px; }
+ 
+  #widUL2{
+ width:350px; } 
+  #widUL3{
+    width:141px;
+  }
+  #widUL4{
+    width:71px;
+  }
+  #widUL5{
+    width:116px;
+  }   
+}
+
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #Heading{font-size:20px !important;}
+  #subheading{font-size: 14px !important}
+}
+ 
+@media screen and (min-width: 769px) and (max-width: 2600px) {
+  #my-contentS { display: none; }   /* hide it elsewhere */
+  #my-contentL { display: block; }  /* show it on small screens */ 
+  #collwid {width: 325px;}
+  #widUL1{
+  width:325px; 
+  } 
+  #widUL2{
+  width:640px; 
+  }
+    #widUL3{
+    width:259px;
+  }
+  #widUL4{
+    width:130px;
+  }
+  #widUL5{
+    width:210px;
+  }    
+}
+ 
+.ulstyle
+{
+  list-style-type: none;
+  margin-left: 0px;
+/*  overflow: auto;*/
+}
+ 
+.borderlist
+{
+    border: 1px solid black;
+}
+#listyle {
+/*  white-space: nowrap;*/
+  overflow: auto;
+  height:40px;
+  padding: 5px 5px 5px 5px;
+}
+
+.navbar-header {
+   min-height: 40px !important;
+}
+</style>
+ 
+<nav class="navbar navbar-static-top navbar-default" role="navigation">
+ 
+       <div class="container-fluid">
+        <div class="navbar-header" style="margin-top:1%;padding-top: 0.4rem">
+            <a class="navbar-brand" href=""><!-- <span class="ge-logo"></span>  --><span id="Heading" style="font-size: 22px;">Asset Life Cycle Event Viewer<small id="subheading"><i>powered by</i> Predix</small></span></a>
+        </div>
+    </div>
+ 
+ 
+     <div class="primary-navbar nav-collapse" style="background-color:rgb(65, 65, 65)">
+      <div class="container-fluid a">
+        <ul class="nav navbar-nav" style="margin-left:0;margin-bottom:0;margin-top:0 !important">
+          <li >
+            <a ui-sref="Home">Home</a>
+          </li>
+          <li >
+            <a ui-sref="AssetHealthandReliability">Asset Health and Reliability</a>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="active"  >Quick Links <i class="icon-chevron-down"></i></a>
+            <ul  class="dropdown-menu">
+              <!--  <li><a ui-sref="AssetHealthByDate">Asset Health By Date</a></li> -->
+              <li><a ui-sref="ParameterAnalysis">Parameter Analysis</a></li>
+                <li><a ui-sref="AssetBenchmarking">Asset Benchmarking</a></li>
+                <li><a ui-sref="Biblography">Bibliography Details</a></li>
+         
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+ 
+</nav>
+<br>
+ 
+<div class="container-fluid content" style="font-size:16px;color:black">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 col-lg-6" style="padding-left: 0px; padding-right: 0px;">
+          <section class="module sidebar">
+            <div class="module-body"> 
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">             
+                  <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">                     
+                    <div class="row" style="font-weight:bold">
+                      Aircraft
+                    </div>
+                    <div class="row">
+                      <div class="ui selection dropdown col-md-5 col-sm-10 col-xs-12" id="Aircraft">
+                      <input name="tags" type="hidden">
+                      <i class="dropdown icon"></i>
+                      
+                      <div class="default text" style="color:#000000 !important;"> {{aircraftData1}}</div>
+ 
+                      <div class="menu" >
+                      <div class="item" ng-repeat="options in aircraftData" data-value="{{options.aircraftModel}}" ng-click="ChangeAircraftA1(options.aircraftModelID)">{{options.aircraftModel}}</div> </div>
+                      </div>
+                    </div>
+                    <div class="row" id="my-contentL">
+                      &nbsp;
+                    </div>                   
+                    <div class="row" style="font-weight:bold">
+                      Airliner
+                    </div>
+                    <div class="row">
+                      <div class="ui selection dropdown col-md-5 col-sm-10 col-xs-12" id="Airliner">
+                        <input name="tags" type="hidden">
+                        <i class="dropdown icon"></i>
+                        
+                        <div class="default text"  style="color:#000000 !important;">{{airlinerData1}}</div>
+                        <div class="menu" >
+                          <div class="item" ng-repeat="options in airlinerData" data-value="{{options.customerID}}" ng-click="ChangeAirlinerA1(options.customerID)">{{options.airline}}</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                    <div class="row" style="font-weight:bold">
+                    ESN
+                    </div>
+                    <div class="row">
+                       <div class="ui selection dropdown col-md-5 col-sm-10 col-xs-12" id="ESN">
+                        <input name="tags" type="hidden">
+                        <i class="dropdown icon"></i>
+                        
+                        <div class="default text" style="color:#000000 !important;">{{esnData1}}</div>
+                        <div class="menu" >
+                          <div class="item" ng-repeat="options in esnData track by $index" data-value="{{options.esn}}" ng-click="ChangeESNA1(options.esn)">{{options.esn}}</div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" id="my-contentL">
+                      &nbsp;
+                    </div>
+                    <div class="row" id="my-contentL">
+                      &nbsp;
+                    </div>          
+                    <div class="row" style="font-weight:bold">
+                      Sister Engine : {{Asset1.sisterengine}}
+                    </div>
+                    <div class="row" style="font-weight:bold">
+                    Tail #  :  {{Asset1.tailnumber}}                         
+                    </div>                                                           
+                  </div>  
+                </div>             
+              </div>
+            </div>
+          </section>
+        </div>
+ 
+        <div class="col-md-6 col-sm-6 col-xs-12 col-lg-6" style="padding-right: 0px;" id="smartleftpad">
+          <section class="module sidebar">
+            <div class="module-body"> 
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">             
+                  <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6" >
+                    <div class="row" style="font-weight:bold">
+                      Aircraft
+                    </div>
+                    <div class="row">
+                      <div class="ui selection dropdown col-md-5 col-sm-10 col-xs-12" id="Aircraft1">
+                        <input name="tags" type="hidden">
+                        <i class="dropdown icon"></i>
+                        
+                        <div class="default text">Select</div>
+                        <div class="menu" >
+                          <div class="item" ng-repeat="options in aircraftData" data-value="{{options.aircraftModelID}}" ng-click="ChangeAircraftA2(options.aircraftModelID,options.aircraftModel)">{{options.aircraftModel}}</div>                               
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" id="my-contentL">
+                      &nbsp;
+                    </div>                    
+                    <div class="row" style="font-weight:bold">
+                    Airliner
+                    </div>
+                    <div class="row">
+                      <div class="ui selection dropdown col-md-5 col-sm-10 col-xs-12" id="Airliner1">
+                        <input name="tags" type="hidden">
+                        <i class="dropdown icon"></i>
+                        
+                        <div class="default text" >Select</div>
+                        <div class="menu" >
+                          <div class="item" ng-repeat="options in airlinerDataA2" data-value="{{options.customerID}}" ng-click="ChangeAirlinerA2(options.customerID,options.airline)">{{options.airline}}</div>
+                         
+                        </div>
+                      </div>
+                    </div>                  
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6" >
+                    <div class="row" style="font-weight:bold">
+                      ESN
+                    </div>
+                    <div class="row">
+                      <div class="ui selection dropdown col-md-5 col-sm-10 col-xs-12" id="ESN1">
+                        <input name="tags" type="hidden">
+                        <i class="dropdown icon"></i>
+                        
+                        <div class="default text">Select</div>
+                        <div class="menu" >
+                          <div class="item" ng-repeat="options in esnDataA2" data-value="{{options.esn}}" ng-click="ChangeESNA2(options.esn)">{{options.esn}}</div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" id="my-contentL"> &nbsp;
+                    </div>
+                    <div class="row" id="my-contentL">
+                      &nbsp;
+                    </div>                                                                                                    
+                    <div class="row" style="font-weight:bold">
+                      Sister Engine : {{Asset2.sisterengine}}
+                    </div>
+                    <div class="row" style="font-weight:bold">
+                    Tail #  :  {{Asset2.tailnumber}}                          
+                    </div>                                                           
+                  </div>
+                </div>                    
+              </div>
+            </div>
+          </section>        
+        </div>
+    </div>
+  </div>
+</div>
+ 
+<div class="container-fluid content" style="font-size:16px;color:black">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+      <section class="module sidebar" >
+          <div class="module-body"> 
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                    <div class="row">                  
+                               
+                   <a  class="btn btn-default openall" style="background: #4682B4;color: #ffffff;margin-left: 15px; height: 40px; padding-top: 10px;font-size: 17px;border:0px;"> <i class="glyphicon glyphicon-plus"></i>  Expand</a> 
+                   <a class="btn btn-default closeall" style="background: #4682B4;color: #ffffff;margin-left: 15px; height: 40px; padding-top: 10px;font-size: 17px;border:0px;"> <i class="glyphicon glyphicon-minus"></i>  Close &nbsp;&nbsp;</a>
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default" style="margin-left: 15px;margin-right: 15px;border:0px;">
+                             
+                            <div class="panel-body" style="padding: 5px 0px 0px 0px;">                       
+                              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">                       
+                                <div class="panel panel-default" style="border:0px;">
+                                  <div class="panel-heading">
+                                      <div class="panel-title">
+                                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+                                          <i class="glyphicon glyphicon-minus"></i> Contact Details
+                                          </a>
+                                      </div>
+                                  </div>                           
+                                  <div id="collapse1" class="panel-collapse collapse in">                                 
+                                    <div class="panel-body" style="padding: 5px 0px 0px 0px;">
+                                      <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;margin-bottom: 5px;overflow-x:auto;">
+                                          <table>
+                                            <tr>
+                                              <td>
+                                              <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="cDetails in contactDetails" style="font color: #4682B4;font-weight:bold">{{cDetails.val}}</li></ul></td>
+                                              <td>
+                                                <ul id="widUL1" class="ulstyle listyle"><li class="borderlist" id="listyle" ng-repeat="cAsset1 in cDetail1 track by $index">{{cAsset1}}</li></ul>
+                                              </td>
+                                              <td><ul id="widUL2" class="ulstyle listyle"><li class="borderlist" id="listyle" ng-repeat="cAsset2 in cDetail2 track by $index">{{cAsset2}}</li></ul></td>
+                                              </tr>            
+                                          </table>
+                                      </div>                                                                    
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">                     
+                                <div class="panel panel-default" style="border:0px;">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                                            <i class="glyphicon glyphicon-minus"></i> Engine Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse in">
+                                        <div class="panel-body"  style="padding: 5px 0px 0px 0px;">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;margin-bottom: 5px;overflow-x:auto;">
+                                              <table>
+                                                <tr>
+                                                  <td>
+                                                  <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="eDetails in engineDetails" style="font color: #4682B4;font-weight:bold">{{eDetails.val}}</li></ul></td>
+                                                  <td>
+                                                    <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="eAsset1 in eDetail1 track by $index">{{eAsset1}}</li></ul>
+                                                  </td>
+                                                  <td><ul id="widUL2" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="eAsset2 in eDetail2 track by $index">{{eAsset2}}</li></ul></td>
+                                                  </tr>             
+                                              </table>
+                                          </div>                                                                   
+                                         </div>
+                                    </div>                       
+                                </div>
+                              </div>
+                              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">                     
+                                <div class="panel panel-default" style="border:0px;">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+                                            <i class="glyphicon glyphicon-minus"></i> ContactBasePointDetails
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse in">
+                                        <div class="panel-body" style="padding: 5px 0px 0px 0px;">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;margin-bottom: 5px;overflow-x:auto;">
+                                              <table>
+                                                <tr>
+                                                  <td>
+                                                  <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="cbpDetails in cbpDetails" style="font color: #4682B4;font-weight:bold">{{cbpDetails.val}}</li></ul></td>
+                                                  <td>
+                                                    <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="cbpAsset1 in cbpDetail1 track by $index">{{cbpAsset1}}</li></ul>
+                                                  </td>
+                                                  <td><ul id="widUL2" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="cbpAsset2 in cbpDetail2 track by $index">{{cbpAsset2}}</li></ul></td>
+                                                  </tr>            
+                                              </table> 
+                                          </div>                                                                   
+                                         </div>
+                                    </div>                       
+                                </div>
+                              </div>
+                              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">                      
+                                <div class="panel panel-default" style="border:0px;">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
+                                            <i class="glyphicon glyphicon-minus"></i> OperatingParametersDetails
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse in">
+                                        <div class="panel-body" style="padding: 5px 0px 0px 0px;">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;margin-bottom: 5px;overflow-x:auto">                         
+                                              <table>
+                                                <tr>
+                                                  <td>
+                                                  <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="opDetails in opDetails" style="font color: #4682B4;font-weight:bold">{{opDetails.val}}</li></ul></td>
+                                                  <td>
+                                                    <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="opAsset1 in opDetail1 track by $index">{{opAsset1}}</li></ul>
+                                                  </td>
+                                                  <td><ul id="widUL2" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="opAsset2 in opDetail2 track by $index">{{opAsset2}}</li></ul></td>
+                                                  </tr>            
+                                              </table> 
+                                          </div>                                                                 
+                                         </div>
+                                    </div>                       
+                                </div>
+                              </div>
+                              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">                      
+                                <div class="panel panel-default" style="border:0px;">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">
+                                            <i class="glyphicon glyphicon-minus"></i> SVDetailsDetails
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapse5" class="panel-collapse collapse in">
+                                        <div class="panel-body" style="padding: 5px 0px 0px 0px;">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;margin-bottom: 5px;overflow-x:auto">
+                                                <table>
+                                                <tr>
+                                                  <td>
+                                                  <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="svDetails in svDetails" style="font color: #4682B4;font-weight:bold">{{svDetails.val}}</li></ul></td>
+                                                  <td>
+                                                    <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="svAsset1 in svDetail1 track by $index">{{svAsset1}}</li></ul>
+                                                  </td>
+                                                  <td><ul id="widUL2" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="svAsset2 in svDetail2 track by $index">{{svAsset2}}</li></ul></td>
+                                                  </tr>            
+                                              </table>                                                                        
+                                          </div>
+                                        </div>
+ 
+                                    </div>                       
+                                </div>
+                              </div>
+                              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">                     
+                                <div class="panel panel-default" style="border:0px;">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse6">
+                                            <i class="glyphicon glyphicon-minus"></i> KeyParametersDetails
+                                            </a>
+                                        </div>
+                                    </div>
+                                   <div id="collapse6" class="panel-collapse collapse in">
+                                        <div class="panel-body" style="padding: 5px 0px 0px 0px;">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;margin-bottom: 5px;overflow-x:auto">
+                                              <table>
+                                                <tr>
+                                                  <td>
+                                                  <ul class="ulstyle" id="widUL3"><li class="borderlist" id="listyle" ng-repeat="kDetails in kpDetails" style="font color: #4682B4;font-weight:bold">{{kDetails.val}}</li></ul></td>
+                                                  <td>
+                                                  <ul class="ulstyle" id="widUL4"><li class="borderlist" id="listyle" ng-repeat="kpAsset1 in kpDetail1Min track by $index">{{kpAsset1}}</li></ul></td>                         
+                                                  <td>
+                                                    <ul class="ulstyle" id="widUL4"><li class="borderlist" id="listyle" ng-repeat="kpAsset1 in kpDetail1Avg track by $index">{{kpAsset1}}</li></ul>
+                                                  </td>
+                                                  <td><ul class="ulstyle" id="widUL4"><li class="borderlist" id="listyle" ng-repeat="kpAsset1 in kpDetail1Max track by $index">{{kpAsset1}}</li></ul></td>
+                                                <td>
+                                                <ul class="ulstyle" id="widUL5"><li class="borderlist" id="listyle" ng-repeat="kpAsset2 in kpDetail2Min track by $index">{{kpAsset2}}</li></ul></td>                         
+                                                  <td>
+                                                    <ul class="ulstyle" id="widUL5"><li class="borderlist" id="listyle" ng-repeat="kpAsset2 in kpDetail2Avg track by $index">{{kpAsset2}}</li></ul>
+                                                  </td>
+                                                  <td><ul class="ulstyle" id="widUL5"><li class="borderlist" id="listyle" ng-repeat="kpAsset2 in kpDetail2Max track by $index">{{kpAsset2}}</li></ul></td>                         
+                                                  </tr>            
+                                              </table>                                             
+                                          </div>                                                                   
+                                         </div>
+                                    </div>                       
+                                </div>
+                              </div>
+                              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">                     
+                                <div class="panel panel-default" style="border:0px;">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse7">
+                                            <i class="glyphicon glyphicon-minus"></i> CurrentConfigPointsDetails
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapse7" class="panel-collapse collapse in">
+                                        <div class="panel-body" style="padding: 5px 0px 0px 0px;">  
+                                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 " style="float:left; border: 1px solid #000000;padding-right: 0px;padding-left: 0px;margin-bottom:5px;overflow-x:auto">
+
+                                              <ul style="list-style-type: none;display: inline-flex;margin:0px;padding:0px;">
+                                              <li>
+                                                <table>
+                                                  <tr>
+                                                    <td class="boldcol" style="border: 1px solid #000;font color: #4682B4;font-weight:bold">SL No</td><td class="boldcol" style="border: 1px solid #000;font color: #4682B4;font-weight:bold">Part #</td><td class="boldcol" style="border: 1px solid #000;font color: #4682B4;font-weight:bold">Key word</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                    <ul class="ulstyle" id="widUL4"><li class="borderlist" id="listyle" ng-repeat="k1Details in Asset1.ccpdList">{{k1Details.serialNumber}}</li></ul></td>
+                                                    <td>
+                                                    <ul class="ulstyle" id="widUL3"><li class="borderlist" id="listyle" ng-repeat="k1Details in Asset1.ccpdList track by $index">{{k1Details.newPartNumber}}</li></ul></td>                         
+                                                    <td>
+                                                      <ul class="ulstyle" id="widUL3"><li class="borderlist" id="listyle" ng-repeat="k1Details in Asset1.ccpdList track by $index">{{k1Details.keyword}}</li></ul>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </li>
+                                              <li ng-show="display2==='Show' " ng-hide="display2==='Hide'">
+                                                <table>
+                                                  <tr>
+                                                    <td class="boldcol" style="border: 1px solid #000;font color: #4682B4;font-weight:bold">SL No</td><td class="boldcol" style="border: 1px solid #000;font color: #4682B4;font-weight:bold">Part #</td><td class="boldcol" style="border: 1px solid #000;font color: #4682B4;font-weight:bold">Key word</td>
+                                                  </tr>
+                                                  <tr>                            
+                                                      <td>
+                                                      <ul class="ulstyle" id="widUL4"><li class="borderlist" id="listyle" ng-repeat="k2Details in Asset2.ccpdList">{{k2Details.serialNumber}}</li></ul></td>
+                                                      <td>
+                                                      <ul class="ulstyle" id="widUL3"><li class="borderlist" id="listyle" ng-repeat="k2Details in Asset2.ccpdList track by $index">{{k2Details.newPartNumber}}</li></ul></td>                         
+                                                      <td>
+                                                        <ul class="ulstyle" id="widUL3"><li class="borderlist" id="listyle" ng-repeat="k2Details in Asset2.ccpdList track by $index">{{k2Details.keyword}}</li></ul>
+                                                      </td>                                                    
+                                                  </tr>                          
+                                                </table>
+                                              </li>
+                                              </ul>                                                   
+                                            </div>                                                                
+                                         </div>
+                                    </div>                       
+                                </div>
+                              </div>
+                              <div class="panel-group" id="accordion">
+                                <div class="panel panel-default" style="border:0px;">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapse8">
+                                            <i class="glyphicon glyphicon-minus"></i> PreviousSummaryDetails
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapse8" class="panel-collapse collapse in">
+                                        <div class="panel-body" style="padding: 5px 0px 0px 0px;">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;margin-bottom: 5px;overflow-x:auto;">    
+                                              <table>
+                                                <tr>
+                                                  <td>
+                                                  <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="pDetails in psDetails" style="font color: #4682B4;font-weight:bold">{{pDetails.val}}</li></ul></td>
+                                                  <td>
+                                                    <ul id="widUL1" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="psAsset1 in psDetail1 track by $index">{{psAsset1}}</li></ul>
+                                                  </td>
+                                                  <td><ul id="widUL2" class="ulstyle"><li class="borderlist" id="listyle" ng-repeat="psAsset2 in psDetail2 track by $index">{{psAsset2}}</li></ul></td>
+                                                  </tr>            
+                                              </table>
+                                          </div>                                                                    
+                                         </div>
+                                    </div>                       
+                                </div>
+                              </div>
+                            </div>
+                         <!--  </div> -->
+                        </div>
+                      </div>                       
+                    </div>
+                  </div>             
+              </div>
+          </div>
+      </section>
+    </div>
+  </div>
+</div>

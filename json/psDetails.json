@@ -1,0 +1,20 @@
+
+[{
+    "key": "Last Water Wash",
+    "val": "Last Water Wash"
+},{
+    "key": "Last Event (SV/QT/OWS) Date",
+    "val": "Last Event (SV/QT/OWS) Date"
+}, {
+    "key": "SV Reason",
+    "val": "SV Reason"
+}, {
+    "key": "SV Type",
+    "val": "SV Type"
+}, {
+    "key": "Price",
+    "val": "Price"
+}, {
+    "key": "Cost", 
+    "val": "Cost"
+}]

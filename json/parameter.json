@@ -1,0 +1,26 @@
+
+[{
+    "key": "0",
+    "val": "None"
+}, {
+    "key": "1",
+    "val": "DEGT"
+}, {
+    "key": "2",
+    "val": "Altitude"
+}, {
+    "key": "3",
+    "val": "Oil Temperature"
+}, {
+    "key": "4",
+    "val": "Mach"
+}, {
+    "key": "5",
+    "val": "Core Speed"
+}, {
+    "key": "6",
+    "val": "Fuel Flow"
+}, {
+    "key": "7",
+    "val": "Oil Pressure"
+}]

@@ -1,0 +1,256 @@
+<style type="text/css">
+       
+
+  
+       
+        .boldHeader{
+            font-weight: bold;
+        }
+
+.navbar-header {
+   min-height: 40px !important;
+}
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  
+  #Heading{font-size:20px !important;}
+  #subheading{font-size: 14px !important}
+}
+</style>
+<nav class="navbar navbar-static-top navbar-default" role="navigation" id="Nav">
+ 
+     <div class="container-fluid">
+        <div class="navbar-header" style="margin-top:1%;padding-top: 0.4rem">
+            <a class="navbar-brand" href=""><!-- <span class="ge-logo"></span>  --><span id="Heading" style="font-size: 22px;">Asset Life Cycle Event Viewer<small id="subheading"><i>powered by</i> Predix</small></span></a>
+        </div>
+    </div>
+     <div class="primary-navbar nav-collapse" style="background-color:rgb(65, 65, 65)">
+      <div class="container-fluid a">
+        <ul class="nav navbar-nav" style="margin-left:0;margin-bottom:0;margin-top:0 !important">
+          <li  >
+            <a ui-sref="Home">Home</a>
+          </li>
+          <li>
+            <a ui-sref="AssetHealthandReliability">Asset Health and Reliability</a>
+          </li>
+          <li class="dropdown" class="active">
+            <a data-toggle="dropdown" >Quick Links <i class="icon-chevron-down"></i></a>
+            <ul  class="dropdown-menu">
+          <!--      <li><a ui-sref="AssetHealthByDate">Asset Health By Date</a></li> -->
+              <li><a ui-sref="ParameterAnalysis">Parameter Analysis</a></li>
+                <li><a ui-sref="AssetBenchmarking">Asset Benchmarking</a></li>
+                <li><a ui-sref="Biblography">Bibliography Details</a></li>
+         
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+ 
+</nav>
+<br>
+
+<div class="container-fluid content " id="Label" style="font-size:15px">
+  <section class="module sidebar">
+    <div class="module-body">
+
+            <div class="fixed-header">
+                <label>
+                    <a id="SourceOfDataLink">Source of Data</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a id="WeibullAnalysisLink">Weibull Analysis</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a id="WishListLink">Wishlist</a>
+                </label>
+            </div>
+    </div>
+  </section>
+</div>
+
+
+
+<div class="container-fluid content " id="SourceOfData" >
+  <div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+      <section class="module sidebar" style="margin-top:1%">
+  
+              <div class="module-body">  
+
+                  <div class="row" style="margin-bottom:2%">
+                        <div>
+                        <p style="margin-left: 5%;font-style:normal; color: #66b3ff ;  font-size:18px;margin-top: 2%;" class = "boldHeader">Source of Data
+                     </p>
+                     <img id="Top" style="margin-right:2%" class="pull-right" src="../images/top-icon.png"></img>
+                        
+                      </div>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654;  FDM</p>
+                        <p style="margin-left: 15%; font-weight: bold;">&#9679; TSN and CSN data for Engines.</p>
+
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; iCam Runs</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Current Operating Parameter of the contract per the CMR run in 2016.</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Forecasted Shop Visit for each ESN per the CMR run in 2016.</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; LLP Baseline</p>
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Cost Database</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Shop Visit data for all Engines though Live CSR, PPR</p>
+
+
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Configuration Data</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Predix Engine Configuration portal</p>
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; CMR/FM Targets</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Target Cost Tool</p>
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Contract/Amendments Copies</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Base Operating Parameters of each contract/airline</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Contract Start and End Date</p>
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Warranty Data</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; ESS Portal</p>
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Fleet Supports</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Thrust Rating Change</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Tail Change</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Alert Data</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; CNR/Event Data</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Current Details of the Enginese</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Key Parameters - DEGT, Oil Pressure, Oil Temperature, Mach, Fuel Flow, Altitude, Core Speed</p>
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Seed Data</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Details of Full SV, QT SV, Water Wash</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Reason for SV</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; SV Count</p>
+
+                  </div>
+              </div>
+        </section>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid content"  id="WeibullAnalysis" >
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+      <section class="module sidebar" >
+
+              <div class="module-body">  
+
+                  <div class="row" style="margin-bottom:2%">
+                    <div>
+                      <p style="margin-left: 5%;font-style:normal; color: #66b3ff ; font-size:18px;margin-top: 2%" class="boldHeader">Engine Failure Forecasting - Weibull Analysis
+                        
+                   
+                   
+                    </p>
+                      <img id="Top1" style="margin-right:2%" class="pull-right" src="../images/top-icon.png"></img>
+                 
+                    </div>
+
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654;    Objective </p>
+                        <p style="margin-left: 15%; font-weight: bold;">&#9679; Forecasting based on Historical based modelling &amp; diagnostic modelling</p>
+                        <p style="margin-left: 15%; font-weight: bold;">&#9679; Establishing relationship between diagnostic data &amp; historical events pertaining to alerts, corresponding CNRs &amp; SVs</p>
+                        <p style="margin-left: 15%; font-weight: bold;">&#9679; Leverage diagnostic data for improved forecasting along with the FM model for CMR</p>
+
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Modelling  Assumptions </p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; GE90 platform specific (Customers- Emirates, Cathay Pacific &amp; Qatar )</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; 8 years  Data Set(2008 onwards) </p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; SEED data (referred for historical data , filtered for SVs having Full and QT , only) </p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Numbers of Alerts and CNRs (referred for primary variables from diagnostic side)</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Mapping of Alerts-CNR-SEED data  (for 394 unique ESNs) </p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Modelling is for only "forthcoming SV/ ESN"</p>
+
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Modelling Procedure :</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Alerts - Count of Alarms description, Flight Date and Time between consecutive SVs from the SEED data for each ESN. 
+                        Categorization of the count of Alarms based on EGT, Fan Vibe, Oil/Fuel Issues on basis of alarms description
+                        </p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; CNRs - Count of Observations, Date Issued between Consecutive SVs from the SEED data for a particular ESN.
+                        Categorization of Count of observation description based on EGT, Chip Related  Issues, Oil/Fuel Issues on basis of observation column description</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; SEED Data - Filtering out ESNs for Emirates, Cathay Pacific, Qatar for Full and QT SVs having a SV post Jan '08.  </p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Weibull analysis from CNR data-</p>    
+                        <p style="margin-left: 18%;font-weight: bold;">o Root cause mapping between two Shop visits (ie, SV1 to SV2)</p>
+                        <p style="margin-left: 18%;font-weight: bold;">o Identify top drivers for shop visit. Fuel/Oil issue and Fan/Core vibration are identified as top drivers.</p>
+                        <p style="margin-left: 18%;font-weight: bold;">o Create Weibull's for top drivers.</p>            
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Analyze the CNR Weibull impact in the CMR-</p> 
+                        <p style="margin-left: 18%;font-weight: bold;">o Extract SV forecast for subject engines from the CMR run.</p>
+                        <p style="margin-left: 18%;font-weight: bold;">o Make new ICAM run for subject engines by adding CNR Weibull's along with Fleet model Weibull's which are used for CMR run.</p>
+                        <p style="margin-left: 18%;font-weight: bold;">o Analyze failure forecast changes because of CNR Weibull's</p>
+                        <p style="margin-left: 18%;font-weight: bold;">o Calculate accuracy of forecast when we include CNR Weibull's over CMR against actual shop visits.</p>
+
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Results &amp; Analysis :</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679;  The CNR Weibulls predict's early shop visit over CMR forecast by 4 to 14 months.</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679;  When we compare failure forecast VS actual shop visits happened in Jan to Jun'16, "The CMR+CNR" Weibull's predicts 62% accurate than CMR only Weibull's.</p>            
+
+                       
+                  </div>
+              </div>
+        </section>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid content" id="Wishlist">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+      <section class="module sidebar" >
+
+              <div class="module-body">  
+
+                  <div class="row" style="margin-bottom:2%">
+                    <div>
+                     <p style="margin-left: 5%;font-style:normal; color: #66b3ff ; font-size:18px;margin-top: 2%;" class="boldHeader">Wishlist
+                  
+                </p>
+                  <img id="Top2" style="margin-right:2%" class="pull-right" src="../images/top-icon.png"></img>
+                   </div>
+
+                        <p style="margin-left: 10%;"> Operating Parameters ( Utilization, FL, Derate &amp; Temperature) </p>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654;    Base Billings (Popular/Restored) and Supplemental. </p>
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654;    Past Dues (Billing COE) </p>
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654;    Service Bulletin  </p>
+
+                        <p style="margin-left: 15%; font-weight: bold;">&#9679; SB embedded on the aircraft</p>
+                        <p style="margin-left: 15%; font-weight: bold;">&#9679; SB yet to be complied </p>
+
+
+
+
+                        <p style="margin-left:10%;"class="boldHeader">&#9654; BIS Findings of each Shop Visit</p>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Offload SV Engine Data.</p>
+                        <p style="margin-left: 15%;font-weight: bold;">&#9679; Benchmarking analysis</p>
+
+
+
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Shop Engine Slot mapping based on the forecast event.</p>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Live Alert/Event mapping to the tool.</p>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Service Cost Analysis mapping to the tool.</p>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Pricing Tool mapping to the tool.</p>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Scale up for more product lines.</p>
+                        <p style="margin-left: 10%;"class="boldHeader">&#9654; Service Credits</p>
+          
+
+                       
+                  </div>
+              </div>
+        </section>
+    </div>
+  </div>
+</div>
